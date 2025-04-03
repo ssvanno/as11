@@ -13,4 +13,4 @@ jobs:
     - name: produce test1 output
       run: python3 find_lowest_number.py test_data/test3_input.txt output.txt
     - name: compare expected output
-      run: diff test3_expected.txt output.txt
+      run: diff test_data/test3_expected.txt output.txt
