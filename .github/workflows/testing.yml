@@ -1,0 +1,16 @@
+name: Number Testing
+on: [push]
+jobs:
+  test_1:
+    name: 10 Number Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: set up python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: produce test1 output
+      run: python3 find_lowest_number.py test_data/test3_input.txt output.txt
+    - name: compare expected output
+      run: diff test3_expected.txt output.txt
