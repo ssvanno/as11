@@ -27,3 +27,17 @@ jobs:
       run: python3 find_lowest_number.py test_data/test2_input.txt output.txt
     - name: compare expected output
       run: diff test_data/test2_expected.txt output.txt
+  test_3:
+    name: Blank Number Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: set up python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: produce test3 output
+      run: python3 find_lowest_number.py test_data/test3_input.txt output.txt
+    - name: compare expected output
+      run: diff test_data/test3_expected.txt output.txt
+
